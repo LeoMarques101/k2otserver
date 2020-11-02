@@ -24,8 +24,7 @@ build/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
-*.dll
-*.exe
+
 *_i.c
 *_p.c
 *.ilk
@@ -178,3 +177,6 @@ pip-log.txt
 ## TFS / OT
 #############
 config.lua
+
+*.dll
+*.exe
