@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Outfit Seller" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="128" head="0" body="82" legs="114" feet="95" addons="3"/>
+        <parameters>
+
+                <parameter key="module_outfit" value="1"/>
+		<parameter key="message_greet" value="Olá |PLAYERNAME|. Eu vendo {Outfits}."/>
+
+                <parameter key="outfits" value="pirate;assassin;beggar;shaman;norseman,norsewoman;nightmare;jester;brotherhood;demonhunter;yalaharian;warmaster;wedding;wayfarer"/>
+
+                <parameter key="outfit1" value="12,0,yes;money,100000"/>
+                <parameter key="outfit2" value="13,0,yes;money,100000"/>
+                <parameter key="outfit3" value="14,0,yes;money,100000"/>
+                <parameter key="outfit4" value="15,0,yes;money,100000"/>
+                <parameter key="outfit5" value="16,0,yes;money,100000"/>
+                <parameter key="outfit6" value="17,0,yes;money,100000"/>
+                <parameter key="outfit7" value="18,0,yes;money,100000"/>
+                <parameter key="outfit8" value="19,0,yes;money,100000"/>
+                <parameter key="outfit9" value="20,0,yes;money,100000"/>
+                <parameter key="outfit10" value="21,0,yes;money,100000"/>
+                <parameter key="outfit11" value="22,0,yes;money,100000"/>
+                <parameter key="outfit12" value="23,0,yes;money,100000"/>
+                <parameter key="outfit13" value="24,0,yes;money,100000"/>
+
+
+        </parameters>
+</npc>

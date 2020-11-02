@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Ikea" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="150" max="150"/>
+	<look type="140" head="95" body="79" legs="88" feet="79" addons="2" corpse="2212"/>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="message_greet" value="Ola |PLAYERNAME|. Eu vendo tudo que voce precisa para decorar a sua casa, diga {trade} para ver os itens disponiveis."/>
+
+		<parameter key="shop_buyable" value="1,1863,500;1,1872,500;1,1869,500;1,1866,500;1,1880,500;1,1860,500;1,1857,500;1,1678,500;1,1679,500;1,1680,500;1,1681,500;1,1682,500;1,1683,500;1,1684,500;1,1685,500;1,1686,500;1,1687,500;1,1688,500;1,1689,500;1,1690,500;1,1691,500;1,1692,500;1,1693,500;1,2102,500;1,2103,500;1,2104,500;1,2107,500;1,6502,500;1,2093,500;1,2099,500;1,9837,500;1,9958,500;1,9959,500;1,9941,500;1,9942,500;1,1852,500;1,1853,500;1,1854,500;1,1877,500;1,6503,500;1,6504,500;1,6505,500;1,11264,500;" />
+	</parameters>
+</npc>

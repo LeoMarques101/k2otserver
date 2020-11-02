@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Sapateiro" script="bootmaker.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="146" head="78" body="95" legs="76" feet="90" addons="0"/>
+	<parameters>
+		<parameter key="message_greet" value="Ola |PLAYERNAME|, Eu posso cuidar de suas botas danificadas."/>
+	</parameters>
+</npc>

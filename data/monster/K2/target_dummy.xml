@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <monster name="Target Dummy" nameDescription="a target dummy" race="undead" experience="0" speed="0">
+    <health now="100000000" max="100000000" />
+    <look typeex="5787" />
+    <flags>
+        <flag summonable="0" />
+        <flag attackable="1" />
+        <flag hostile="0" />
+        <flag illusionable="0" />
+        <flag convinceable="0" />
+        <flag pushable="0" />
+        <flag canpushitems="0" />
+        <flag canpushcreatures="0" />
+        <flag targetdistance="0" />
+        <flag staticattack="0" />
+        <flag runonhealth="0" />
+        <flag canwalkonenergy="0" />
+        <flag canwalkonfire="0" />
+        <flag canwalkonpoison="0" />
+    </flags>
+    <defenses armor="0" defense="0">
+        <defense name="healing" interval="5000" chance="100" min="100000000" max="100000000">
+        </defense>
+    </defenses>
+    <immunities>
+        <immunity invisible="1" />
+    </immunities>
+</monster>

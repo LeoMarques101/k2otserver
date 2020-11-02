@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Addon Seller" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="128" head="0" body="94" legs="114" feet="95" addons="3"/>
+
+
+	<parameters>
+		<parameter key="message_greet" value="Olá |PLAYERNAME|. vendo addons para todos os outfits, basta dizer: {first/second NOME}, exemplo: {first citizen}"/>
+        <parameter key="module_outfit" value="1"/>
+
+
+			<parameter key="outfits" value="first citizen;first hunter;first mage;first knight;first nobleman,first noblewoman;first summoner;first warrior;first barbarian;first druid;first wizard;first oriental;first pirate;first assassin;first beggar;first shaman;first norseman,first norsewoman;first nightmare;first jester;first brotherhood;first demonhunter;first yalaharian;first warmaster;first wayfarer;second citizen;second hunter;second mage;second knight;second nobleman,second noblewoman;second summoner;second warrior;second barbarian;second druid;second wizard;second oriental;second pirate;second assassin;second beggar;second shaman;second norseman,second norsewoman;second nightmare;second jester;second brotherhood;second demonhunter;second yalaharian;second warmaster;second wayfarer"/>
+
+
+	        <parameter key="outfit1" value="1,1,yes;money,40000"/>
+	        <parameter key="outfit2" value="2,1,yes;money,40000"/>
+	        <parameter key="outfit3" value="3,1,yes;money,40000"/>
+	        <parameter key="outfit4" value="4,1,yes;money,40000"/>
+	        <parameter key="outfit5" value="5,1,yes;money,40000"/>
+	        <parameter key="outfit6" value="6,1,yes;money,40000"/>
+	        <parameter key="outfit7" value="7,1,yes;money,40000"/>
+	        <parameter key="outfit8" value="8,1,yes;money,40000"/>
+	        <parameter key="outfit9" value="9,1,yes;money,40000"/>
+	        <parameter key="outfit10" value="10,1,yes;money,40000"/>
+	        <parameter key="outfit11" value="11,1,yes;money,40000"/>
+	        <parameter key="outfit12" value="12,1,yes;money,40000"/>
+	        <parameter key="outfit13" value="13,1,yes;money,40000"/>
+	        <parameter key="outfit14" value="14,1,yes;money,40000"/>
+	        <parameter key="outfit15" value="15,1,yes;money,40000"/>
+	        <parameter key="outfit16" value="16,1,yes;money,40000"/>
+	        <parameter key="outfit17" value="17,1,yes;money,40000"/>
+	        <parameter key="outfit18" value="18,1,yes;money,40000"/>
+	        <parameter key="outfit19" value="19,1,yes;money,40000"/>
+	        <parameter key="outfit20" value="20,1,yes;money,40000"/>
+	        <parameter key="outfit21" value="21,1,yes;money,40000"/>
+	        <parameter key="outfit22" value="22,1,yes;money,40000"/>
+	        <parameter key="outfit23" value="24,1,yes;money,40000"/>
+
+	        <parameter key="outfit24" value="1,2,yes;money,40000"/>
+	        <parameter key="outfit25" value="2,2,yes;money,40000"/>
+	        <parameter key="outfit26" value="3,2,yes;5903,1"/>  <!--mage-->
+	        <parameter key="outfit27" value="4,2,yes;money,40000"/>
+	        <parameter key="outfit28" value="5,2,yes;money,40000"/>
+	        <parameter key="outfit29" value="6,2,yes;money,40000"/>
+	        <parameter key="outfit30" value="7,2,yes;money,40000"/>
+	        <parameter key="outfit31" value="8,2,yes;money,40000"/>
+	        <parameter key="outfit32" value="9,2,yes;money,40000"/>
+	        <parameter key="outfit33" value="10,2,yes;money,40000"/>
+	        <parameter key="outfit34" value="11,2,yes;money,40000"/>
+	        <parameter key="outfit35" value="12,2,yes;money,40000"/>
+	        <parameter key="outfit36" value="13,2,yes;money,40000"/>
+	        <parameter key="outfit37" value="14,2,yes;money,40000"/>
+	        <parameter key="outfit38" value="15,2,yes;money,40000"/>
+	        <parameter key="outfit39" value="16,2,yes;money,40000"/>
+	        <parameter key="outfit40" value="17,2,yes;money,40000"/>
+	        <parameter key="outfit41" value="18,2,yes;money,40000"/>
+	        <parameter key="outfit42" value="19,2,yes;money,40000"/>
+	        <parameter key="outfit43" value="20,2,yes;money,40000"/>
+	        <parameter key="outfit44" value="21,2,yes;money,40000"/>
+	        <parameter key="outfit45" value="22,2,yes;money,40000"/>
+	        <parameter key="outfit46" value="24,2,yes;money,40000"/>
+
+
+	</parameters>
+
+
+</npc>

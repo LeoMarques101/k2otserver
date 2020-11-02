@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Armo Shop" script="ARMO.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="131" head="0" body="76" legs="114" feet="115" addons="2"/>
+	<parameters>
+		<parameter key="message_greet" value="Ola |PLAYERNAME|. Diga {trade} e veja meus belos produtos."/>
+	</parameters>
+</npc>
