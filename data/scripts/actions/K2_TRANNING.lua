@@ -20,8 +20,8 @@ local weapons = {
 if not EDTE then EDTE = {} end
 
 ---@ functions to assign or obtain the training status of a player.
-function getPlayerExerciseTrain(player) return EDTE[player] or false end
-function setPlayerExerciseTrain(player, status) EDTE[player] = status return status end
+function getPlayerExerciseTrain(cid) return EDTE[cid] or false end
+function setPlayerExerciseTrain(cid, status) EDTE[cid] = status return status end
 
 ---@ local training function.
 local function exerciseDummyTrainEvent(params, weapon)
@@ -48,7 +48,7 @@ local function exerciseDummyTrainEvent(params, weapon)
                 if weaponCharges <= 1 then
                     exerciseDummyTrainEvent(params, weapon)
                 else
-                    setPlayerExerciseTrain(params.player, addEvent(exerciseDummyTrainEvent, reloadMs, params, weapon))
+                    setPlayerExerciseTrain(params.player:getGuid(), addEvent(exerciseDummyTrainEvent, reloadMs, params, weapon))
                 end
                 return true
             else
@@ -59,7 +59,7 @@ local function exerciseDummyTrainEvent(params, weapon)
             params.player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Voce terminou seu treinamento.")
         end
     end
-    return setPlayerExerciseTrain(params.player, nil)
+    return setPlayerExerciseTrain(params.player:getGuid(), nil)
 end
 
 local function k2tranning(player, item, target, toPosition)
@@ -85,7 +85,7 @@ local function k2tranning(player, item, target, toPosition)
         return player:sendCancelMessage(RETURNVALUE_THEREISNOWAY)
     end
     
-    if not getPlayerExerciseTrain(player) then
+    if not getPlayerExerciseTrain(player:getGuid()) then
         local params = {}
         params.player = player
         params.currentPos = playerPosition
