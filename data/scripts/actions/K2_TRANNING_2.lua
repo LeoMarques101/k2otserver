@@ -37,7 +37,7 @@ k2tranning_login:register()
 k2tranning_logout:register()
 
 
-local function start_train(pid,start_pos,itemid,fpos)
+local function start_train(pid,start_pos,itemid,fpos,dummy)
     local player = Player(pid)
 
     if player ~= nil then
@@ -71,18 +71,19 @@ local function start_train(pid,start_pos,itemid,fpos)
                             if weapons[itemid].skillType == SKILL_MAGLEVEL then
 
                                 --#### TREINO DE MAGIC
-                                player:addManaSpent((manaSpent() * 1) * configManager.getNumber(configKeys.RATE_MAGIC))
+                                player:addManaSpent((manaSpent() * dummy.skillRate) * configManager.getNumber(configKeys.RATE_MAGIC))
 
                             else
                                 --#### TREINO DE SKILL
-                                player:addSkillTries(weapons[itemid].skillType, (skillTries * 1) * configManager.getNumber(configKeys.RATE_SKILL))
+                                player:addSkillTries(weapons[itemid].skillType, (skillTries * dummy.skillRate) * configManager.getNumber(configKeys.RATE_SKILL))
                             end
 
-                            fpos:sendMagicEffect(CONST_ME_HITAREA)
 
                             if weapons[itemid].shootDistEffect then
                                 pos_n:sendDistanceEffect(fpos, weapons[itemid].shootDistEffect)
                             end
+
+                            fpos:sendMagicEffect(weapons[itemid].shootEffect)
 
                             player:setStamina(player:getStamina() + 60)
 
@@ -92,7 +93,7 @@ local function start_train(pid,start_pos,itemid,fpos)
                                 player:setStorageValue(istranning,0)
                                 return true
                             end
-                            local training = addEvent(start_train, voc:getAttackSpeed(), pid,start_pos,itemid,fpos)
+                            local training = addEvent(start_train, voc:getAttackSpeed() * dummy.skillSpeed, pid,start_pos,itemid,fpos,dummy)
                         else
                             exercise:remove(1)
                             player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Sua arma de exercicio expirou, portanto seu treinamento tambem.")
@@ -143,10 +144,11 @@ function weapon.onUse(player, item, fromPosition, target, toPosition, isHotkey)
                 if not weapons[item.itemid].shootDistEffect and (start_pos:getDistance(target:getPosition()) > 1) then
                     return false
                 end
+                local dummy = dummies[target.itemid]
 
                 player:setStorageValue(istranning,1)
                 player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Voce comecou a treinar.")
-                start_train(player:getId(),start_pos,item.itemid,target:getPosition())
+                start_train(player:getId(),start_pos,item.itemid,target:getPosition(),dummy)
             end
         end
 
