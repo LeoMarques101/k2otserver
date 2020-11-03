@@ -18,7 +18,7 @@ expFromPlayersLevelRange = 75
 
 -- Connection Config
 -- NOTE: maxPlayers set to 0 means no limit
-ip = "127.0.0.1"
+ip = "k2otserver.com"
 bindOnlyGlobalAddress = false
 loginProtocolPort = 7171
 gameProtocolPort = 7172
@@ -61,9 +61,9 @@ maxMarketOffersAtATimePerPlayer = 100
 
 -- MySQL
 mysqlHost = "127.0.0.1"
-mysqlUser = "root"
-mysqlPass = "3obvm5cj"
-mysqlDatabase = "k2otserver860"
+mysqlUser = "admin"
+mysqlPass = "brasil00"
+mysqlDatabase = "k2otserver"
 mysqlPort = 3306
 mysqlSock = ""
 
