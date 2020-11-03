@@ -176,6 +176,7 @@ pip-log.txt
 #############
 ## TFS / OT
 #############
+config.lua
 
 *.dll
 *.exe
