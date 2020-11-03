@@ -39,10 +39,10 @@ k2tranning_logout:register()
 
 local function start_train(pid,start_pos,itemid,fpos)
     local player = Player(pid)
-    local exercise = player:getSlotItem(slotForUse)
 
     if player ~= nil then
         local pos_n = player:getPosition()
+        local exercise = player:getSlotItem(slotForUse)
 
         if exercise then
             if exercise.itemid ~= itemid then
