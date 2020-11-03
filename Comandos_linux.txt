@@ -1,0 +1,80 @@
+
+|==============| Instalar servidor |==============|
+# atualizar o linux
+sudo apt-get update
+sudo apt-get upgrade
+
+# instalar bibliotecas para compilar
+sudo apt install git cmake build-essential libluajit-5.1-dev libmysqlclient-dev libboost-system-dev libboost-iostreams-dev libboost-filesystem-dev libpugixml-dev libcrypto++-dev libboost-date-time-dev
+
+# clonar o repositorio do otserver
+git clone --recursive https://github.com/LeoMarques101/k2otserver.git
+
+# compilar
+cd k2otserver
+mkdir build && cd build
+cmake ..
+make
+
+# mover executavel para pasta raiz do projeto
+cd ..
+mv build/tfs .
+
+# executar o servidor
+./tfs
+
+|==============| Google Cloud |==============|
+
+# IP ESTATICO
+Ir em: Rede VPC>Endereços IP externos
+e alterar para ip estatico
+# FIRE WALL abrir portas: 7171-7172
+Ir em: Rede VPC>Firewall
+criar regras:
+intervalos de IP: 0.0.0.0/0
+Protocolo e portas(cliente): tcp:7171-7172
+Protocolo e portas(sql): tcp:3306
+atribuir uma tag para cada e colocar na maquina virtual.
+
+
+|==============| Instalar Base |==============|
+
+## APACHE
+sudo apt update
+sudo apt install apache2
+sudo service apache2 start
+# sudo service apache2 stop
+# sudo service apache2 restart
+
+# MY-SQL
+sudo apt install mysql-server
+sudo service mysql start
+#sudo mysql -u root -p
+#CREATE USER 'admin'@'localhost' IDENTIFIED BY 'brasil00';
+#GRANT ALL PRIVILEGES ON * . * TO 'admin'@'localhost';
+#FLUSH PRIVILEGES;
+
+## phpMyAdmin
+sudo apt-get install phpmyadmin
+
+#incluir 'Include /etc/phpmyadmin/apache.conf' Em: /etc/apache2/apache2.conf
+sudo nano /etc/apache2/apache2.conf
+
+sudo nano /etc/phpmyadmin/apache.conf
+# e mudar o Alias /phpmyadmin
+
+
+|==============| Instalar MyACC |==============|
+
+cd /var/www/html
+sudo wget https://github.com/slawkens/myaac/releases/download/0.8.2/myaac-0.8.2.zip -O myaac.zip
+sudo apt install unzip
+sudo unzip myaac.zip
+sudo mv myaac-0.8.2/* /var/www/html
+sudo rm -rf myaac.zip myaac-master
+sudo rm index.html
+sudo chown -R www-data.www-data /var/www/html
+sudo chmod -R 660 system/cache
+sudo chmod -R 755 /var/www/html
+
+

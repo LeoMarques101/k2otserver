@@ -22,21 +22,23 @@ local firstItems = {
 function onLogin(player)
 	if player:getLastLoginSaved() == 0 then
 
-		local BP = player:addItem(2004, 1)
-		local vocitens = itens[player:getVocation():getId()]
+		if player:getVocation():getId() ~= 0 then
+			local BP = player:addItem(2004, 1)
 
-		for i = 1, #vocitens do
-			player:addItem(vocitens[i], 1)
+			local vocitens = itens[player:getVocation():getId()]
+
+			for i = 1, #vocitens do
+				player:addItem(vocitens[i], 1)
+			end
+
+			for i = 1, #firstItems do
+				player:addItem(firstItems[i].id, firstItems[i].quant)
+			end
+
+			if player:getVocation():getId() == 3 or player:getVocation():getId() == 7 then
+				player:addItem(2544, 100) --flechas
+			end
 		end
-
-		for i = 1, #firstItems do
-			player:addItem(firstItems[i].id, firstItems[i].quant)
-		end
-
-		if player:getVocation():getId() == 3 or player:getVocation():getId() == 7 then
-			player:addItem(2544, 100) --flechas
-		end
-
 	end
 	return true
 end
