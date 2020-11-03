@@ -24,7 +24,6 @@ function onLogin(player)
 	if player:getLastLoginSaved() == 0 then
 
 			local BP = player:addItem(2004, 1)
-
 			local vocitens = itens[player:getVocation():getId()]
 
 			for i = 1, #vocitens do

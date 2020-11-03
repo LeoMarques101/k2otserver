@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `lastday` int(10) unsigned NOT NULL DEFAULT '0',
   `email` varchar(255) NOT NULL DEFAULT '',
   `creation` int(11) NOT NULL DEFAULT '0',
+  `vipdays` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
