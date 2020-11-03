@@ -1,4 +1,5 @@
 local itens ={
+	[0] = {},
 	[1] = {2182,8820,8819,2649,2643},
 	[2] = {2190,8820,8819,2649,2643},
 	[3] = {2456,2460,2660,2649,2643},
@@ -22,7 +23,6 @@ local firstItems = {
 function onLogin(player)
 	if player:getLastLoginSaved() == 0 then
 
-		if player:getVocation():getId() ~= 0 then
 			local BP = player:addItem(2004, 1)
 
 			local vocitens = itens[player:getVocation():getId()]
@@ -38,7 +38,6 @@ function onLogin(player)
 			if player:getVocation():getId() == 3 or player:getVocation():getId() == 7 then
 				player:addItem(2544, 100) --flechas
 			end
-		end
 	end
 	return true
 end
