@@ -14,6 +14,19 @@ CREATE TABLE IF NOT EXISTS `player_autoloot` (
 local k2_autoloot = TalkAction("!autoloot")
 function k2_autoloot.onSay(player, words, param)
 
+    info = {
+        Money_ids = {2148, 2152, 2160}, -- id das moedas do ot
+    }
+
+
+    local str = {
+        "|=======| Commands |=======|\n",
+        "!autoloot [add/remove], [itemID/name]\n",
+        "!autoloot money\n",
+        "!autoloot clear\n",
+    }
+
+
     if (param == '') then
         local list = player:getAutoLootList()
 
@@ -33,7 +46,6 @@ function k2_autoloot.onSay(player, words, param)
         return false
         --return player:sendTextMessage(MESSAGE_INFO_DESCR, text:sub(1, -3) .. '.')
     end
-
 
     local params = param:split(",")
 

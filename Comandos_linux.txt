@@ -77,4 +77,10 @@ sudo chown -R www-data.www-data /var/www/html
 sudo chmod -R 660 system/cache
 sudo chmod -R 755 /var/www/html
 
+|==============| Rodar o server |==============|
+## para rodar o server no ssh, e dar rerun caso o server caia
+while true; do ./tfs; done
 
+## matar o processo do tfs
+pidof tfs
+kill -15 [PID]

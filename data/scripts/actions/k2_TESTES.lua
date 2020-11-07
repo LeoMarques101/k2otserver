@@ -2,7 +2,25 @@ local toolteste = Action()
 
 function toolteste.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 
-	player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED,configManager.getNumber(configKeys.KILLS_TO_RED))
+
+if target:isItem() then
+
+	--target:moveTo(player)
+	--player:addItemEx(item[, canDropOnMap = true[, slot = CONST_SLOT_WHEREEVER]])
+	--player:addItem(itemId[, count = 1[, canDropOnMap = true[, subType = 1[, slot = CONST_SLOT_WHEREEVER]]]])
+	--player:addItem(target:getId(),target:getCount())
+	--target:remove(target:getCount())
+
+	--player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED,txt)
+
+
+end
+
+
+
+
+
+--player:sendTextMessage(MESSAGE_STATUS_CONSOLE_RED,configManager.getNumber(configKeys.KILLS_TO_RED))
 
 --[[
 player:setStorageValue(storage,"&221,223")
